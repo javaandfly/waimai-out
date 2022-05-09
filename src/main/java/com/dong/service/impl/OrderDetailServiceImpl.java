@@ -5,7 +5,10 @@ import com.dong.mapper.OrderDetailMapper;
 import com.dong.pojo.OrderDetail;
 import com.dong.service.IOrderDetailService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>

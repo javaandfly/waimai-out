@@ -2,6 +2,7 @@ package com.dong.controller;
 
 
 import com.dong.Vo.UserVo;
+import com.dong.common.BaseContext;
 import com.dong.common.R;
 import com.dong.pojo.User;
 import com.dong.service.IUserService;
@@ -46,5 +47,11 @@ public class UserController {
         }
         request.getSession().setAttribute("user",user1.getId());
         return R.success("登录成功");
+    }
+    @PostMapping("/loginout")
+    @ResponseBody
+    public R<String> loginOut(HttpServletRequest request){
+        request.getSession().removeAttribute("user");
+        return R.success("退出成功");
     }
 }
