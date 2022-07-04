@@ -72,6 +72,7 @@ public class LongCheckFilter implements Filter {
         }
         if(request.getSession().getAttribute("user")!= null){
             //log.info("用户已登录，用户id为：{}",request.getSession().getAttribute("employee"));
+            //这个存入的是用户的id 是唯一的
             BaseContext.setCurrentId((Long) request.getSession().getAttribute("user"));
             filterChain.doFilter(request,response);
             return;
